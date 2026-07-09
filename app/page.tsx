@@ -2,7 +2,7 @@ export default function Home() {
   return (
     
    <> 
-      <div className="bg-white text-black ">
+      <div className="bg-white text-black min-h-screen ">
 
     <header className="flex justify-between items-center p-4 border-b font-bold">
       
@@ -19,34 +19,49 @@ export default function Home() {
       </div>
     </header>
 
-    <main className="text-center mt-20">
+    <div className="flex">
+
+     <aside className="w-64 flex flex-col gap-3 bg-gray-100 p-4 h-screen">
+
+      <h2>PortIQ</h2>
+      
+       <div>
+        <div>機能A</div>
+
+        <div>機能B</div>
+
+        <div>機能C</div>
+
+       </div>
+
+        <div>利用規約</div>
+
+        <div>お問い合わせ</div>
+
+        <div>FQA</div>
+
+     </aside>  
+
+     <main className="text-center mt-20 flex-1 overflow-y-auto">
 
       <h1 className="text-2xl">
         AI Portfolio Reviewer
       </h1>
 
       <textarea 
-        className="w-96 h-32 border rounded-lg p-10"
+        className="w-full max-w-3xl h-32 border rounded-lg p-4"
         placeholder="ここにポートフォリオを貼り付けてください"
       />          
-
-      <button 
+      <div>
+       <button 
         className="bg-blue-600 text-white px-3 py-1 rounded-lg"
-      >  
-       添削する
-      </button>  
+       >  
+        添削する
+       </button>  
+      </div>
+     </main>
 
-    </main>
-
-    <footer className="text-center  text-sl border-t p-4">
-
-      利用規約
-
-      プライバシーポリシー
-
-      FAQ
-
-    </footer>
+    </div>
     
     </div>
    </> 
